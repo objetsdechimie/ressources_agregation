@@ -5,4 +5,4 @@ Ils peuvent notamment être utile lors de la préparation de concours comme l'ag
 
 # Contenu
 
-Debye_huckel.py :
+Des détails concernant les programmes seront bientôt disponibles ici !
