@@ -1,0 +1,45 @@
+// Arbre Extraction Liquide-Liquide
+digraph {
+	rankdir=TB size="12,12" splines=ortho
+	node [fontname=Helvetica fontsize=11 penwidth=1.5 shape=box style="filled,rounded"]
+	edge [color="#7f8c8d" fontname=Helvetica fontsize=10 penwidth=1.2]
+	A0 [label="DÉPART
+Phase Aqueuse : 100%
+(V = 100 mL)" color="#34495e" fillcolor="#d6e4f0" fontcolor="#2c3e50"]
+	O1 [label="Étage 1 : Phase Organique
+Extrait : 94.74%
+(V = 100 mL)" color="#2ecc71" fillcolor="#e8f5e9" fontcolor="#27ae60"]
+	A1 [label="Étage 1 : Phase Aqueuse
+Restant : 5.26%
+(V = 100 mL)" color="#3498db" fillcolor="#e3f2fd" fontcolor="#2980b9"]
+	A0 -> O1 [label=" Vers Orga (94.7%)"]
+	A0 -> A1 [label=" Reste Eau (5.3%)"]
+	O2 [label="Étage 2 : Phase Organique
+Extrait : 4.99%
+(V = 100 mL)" color="#2ecc71" fillcolor="#e8f5e9" fontcolor="#27ae60"]
+	A2 [label="Étage 2 : Phase Aqueuse
+Restant : 0.28%
+(V = 100 mL)" color="#3498db" fillcolor="#e3f2fd" fontcolor="#2980b9"]
+	A1 -> O2 [label=" Vers Orga (94.7%)"]
+	A1 -> A2 [label=" Reste Eau (5.3%)"]
+	O3 [label="Étage 3 : Phase Organique
+Extrait : 0.26%
+(V = 100 mL)" color="#2ecc71" fillcolor="#e8f5e9" fontcolor="#27ae60"]
+	A3 [label="Étage 3 : Phase Aqueuse
+Restant : 0.01%
+(V = 100 mL)" color="#3498db" fillcolor="#e3f2fd" fontcolor="#2980b9"]
+	A2 -> O3 [label=" Vers Orga (94.7%)"]
+	A2 -> A3 [label=" Reste Eau (5.3%)"]
+	O4 [label="Étage 4 : Phase Organique
+Extrait : 0.01%
+(V = 100 mL)" color="#2ecc71" fillcolor="#e8f5e9" fontcolor="#27ae60"]
+	A4 [label="Étage 4 : Phase Aqueuse
+Restant : 0.00%
+(V = 100 mL)" color="#3498db" fillcolor="#e3f2fd" fontcolor="#2980b9"]
+	A3 -> O4 [label=" Vers Orga (94.7%)"]
+	A3 -> A4 [label=" Reste Eau (5.3%)"]
+	Bilan [label="BILAN GLOBAL
+Total Extrait (Orga) : 100.00%
+Total Perdu (Eau) : 0.00%" color="#f1c40f" fillcolor="#fff9c4" fontcolor="#7f8c8d" shape=note]
+	A4 -> Bilan [constraint=true style=dashed]
+}
